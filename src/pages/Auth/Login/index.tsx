@@ -1,9 +1,9 @@
+import { useNavigate } from 'react-router-dom';
+
 import { login } from '@/apis/auth';
 import Form from '@/components/Form';
 import useAuthForm from '@/hooks/useAuthForm';
 import { authValidateCheck } from '@/utils/authValidateCheck';
-
-import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
   const { data, error, handleChangeValue, handleSubmit } = useAuthForm();
@@ -18,9 +18,12 @@ const LoginPage = () => {
 
       navigate('/');
     } catch (error) {
-      const err = error as { response?: { data?: any; status?: number } };
-      if (err.response) {
-        alert(err.response.data.details);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const err = error as {
+        response?: { data?: { details?: string }; status?: number };
+      };
+      if (err.response?.data?.details) {
+        alert(err.response?.data?.details);
       }
     }
   };
