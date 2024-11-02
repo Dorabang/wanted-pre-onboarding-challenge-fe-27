@@ -1,0 +1,37 @@
+@tailwind components;
+
+.button {
+  @apply w-full rounded-md px-2 py-3 transition-colors;
+}
+
+.contained {
+  @apply bg-sky-500 text-white;
+}
+
+.contained:hover {
+  @apply bg-sky-700;
+}
+
+.contained:disabled:hover {
+  @apply bg-sky-500;
+}
+
+.outlined {
+  @apply border border-sky-500 bg-transparent text-sky-500;
+}
+
+.outlined:hover {
+  @apply bg-sky-50;
+}
+
+.outlined:disabled:hover {
+  @apply bg-sky-500;
+}
+
+.text {
+  @apply bg-transparent text-sky-500;
+}
+
+.text:hover {
+  @apply bg-sky-50 text-sky-700;
+}
