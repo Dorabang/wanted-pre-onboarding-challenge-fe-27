@@ -41,12 +41,9 @@ npm run dev
 - 사전 과제에서 제공된 [API 서버](https://github.com/starkoora/wanted-pre-onboarding-challenge-fe-1-api) readme.md를 참고하여 설치 후, 로컬(http://localhost:8080)에서 실행되고 있는지 확인하세요.
 
 ### 주요 기능
-> 회원가입
+> 회원가입 / 로그인
 - 이메일과 비밀번호의 유효성을 확인합니다.
-
-> 로그인
 - 할 일관련 기능은 로그인 이후에 사용 가능합니다.
-- 이메일과 비밀번호의 유효성을 확인합니다.
   
 > 할 일
 - Todo 목록을 볼 수 있습니다.
