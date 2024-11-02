@@ -3,6 +3,9 @@
 안녕하세요, 프론트엔드 개발자 박수아입니다.
 본 레포지토리는 원티드 프리온보딩 사전과제 제출을 위해 만들어졌습니다.
 
+<br/>
+<br/>
+
 ### 기술 스택
 ---
 |기술|스택|
@@ -13,6 +16,9 @@
 |서버 상태 관리|<img src="https://img.shields.io/badge/reactquery-FF4154?style=flat-square&logo=reactquery&logoColor=white"/>|
 |css|<img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat-square&logo=Tailwind CSS&logoColor=white"/>|
 |빌드|<img src="https://img.shields.io/badge/vite-646CFF?style=flat-square&logo=vite&logoColor=white"/>|
+
+<br/>
+<br/>
 
 ### 프로젝트 실행
 #### 설치 및 실행 방법
@@ -40,11 +46,16 @@ npm run dev
 #### API 서버 연결
 - 사전 과제에서 제공된 [API 서버](https://github.com/starkoora/wanted-pre-onboarding-challenge-fe-1-api) readme.md를 참고하여 설치 후, 로컬(http://localhost:8080)에서 실행되고 있는지 확인하세요.
 
+<br/>
+<br/>
+
 ### 주요 기능
 > 회원가입 / 로그인
 - 이메일과 비밀번호의 유효성을 확인합니다.
 - 할 일관련 기능은 로그인 이후에 사용 가능합니다.
   
+<br/>
+
 > 할 일
 - Todo 목록을 볼 수 있습니다.
 - Todo 추가 버튼(+)을 클릭하면 할 일을 추가할 수 있습니다.
