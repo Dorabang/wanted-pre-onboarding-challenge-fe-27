@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Container from './components/common/Container';
+import Container from './components/common/layout/Container';
 import LoginPage from './pages/Auth/Login';
 import AccountPage from './pages/Auth/Account';
 import ProtectedRoute from './components/common/AuthProvider/ProtectedRoute';
@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import PublicRoute from './components/common/AuthProvider/PublicRoute';
 import useAuthRedirect from './hooks/useAuthRedirect';
-import Header from './components/common/Header';
+import Header from './components/common/layout/Header';
 
 function App() {
   useAuthRedirect();
