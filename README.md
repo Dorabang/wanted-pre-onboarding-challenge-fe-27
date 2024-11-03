@@ -51,16 +51,31 @@ npm run dev
 
 ### 주요 기능
 > 회원가입 / 로그인
+<br/>
+
+![image](https://github.com/user-attachments/assets/8d0f6de7-0d1b-40e8-95f4-9b41fac24d88)
+![image](https://github.com/user-attachments/assets/fd6c8856-25e8-4df9-8180-6bb31e88e1f4)
+
+
 - 이메일과 비밀번호의 유효성을 확인합니다.
 - 할 일관련 기능은 로그인 이후에 사용 가능합니다.
   
 <br/>
 
 > 할 일
+
+<br/>
+
 - Todo 목록을 볼 수 있습니다.
+![image](https://github.com/user-attachments/assets/60c4bc03-c734-4d06-9782-463a56ae2656)
+
 - Todo 추가 버튼(+)을 클릭하면 할 일을 추가할 수 있습니다.
+![image](https://github.com/user-attachments/assets/e5a57382-4408-4741-a94b-be978a92ab21)
+
 - Todo 수정 버튼을 클릭하면 수정 모드를 활성화하고, 수정 내용을 제출하거나 취소할 수 있습니다.
 - Todo 삭제 버튼을 클릭하면 해당 Todo를 삭제할 수 있습니다.
+![image](https://github.com/user-attachments/assets/384c9d5d-31aa-4072-af4a-6858ed8dd31d)
+
 - 할 일은 목록과 상세 영역으로 나누어 확인할 수 있습니다.
 - 새로고침 시에도 현재 상세 영역을 확인할 수 있습니다.
 - 개별 Todo를 조회 순서에 따라 페이지 뒤로가기를 통해 조회할 수 있습니다.
