@@ -1,8 +1,9 @@
-import { createUser } from '@/apis/auth';
-import Form from '@/components/Form';
-import useAuthForm from '@/hooks/useAuthForm';
-import { authValidateCheck } from '@/utils/authValidateCheck';
 import { useNavigate } from 'react-router-dom';
+
+import { createUser } from '@/features/auth/api';
+import Form from '@/shared/Form';
+import useAuthForm from '@/features/auth/hooks/useAuthForm';
+import { authValidateCheck } from '@/features/auth/utils/authValidateCheck';
 
 const AccountPage = () => {
   const { data, error, handleChangeValue, handleSubmit } = useAuthForm();
@@ -15,8 +16,10 @@ const AccountPage = () => {
 
       navigate('/');
     } catch (error) {
-      const err = error as { response?: { data?: any; status?: number } };
-      if (err.response) {
+      const err = error as {
+        response?: { data?: { details: string } };
+      };
+      if (err.response?.data?.details) {
         alert(err.response.data.details);
       }
     }
