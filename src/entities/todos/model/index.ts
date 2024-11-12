@@ -1,4 +1,4 @@
-export type TodoPriority = 'urgent' | 'normal' | 'low';
+import { TodoPriority } from '@/features/todos/types/TodoQueryParams';
 
 export interface TodoItem {
   id: string;
@@ -12,4 +12,5 @@ export interface TodoItem {
 export interface TodoInput {
   title: string;
   content: string;
+  priority: TodoPriority;
 }

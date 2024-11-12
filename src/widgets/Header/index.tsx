@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from 'react-router-dom';
 
-import Button from '@/shared/Button';
+import Button from '@/shared/ui/Button';
 
 const Header = () => {
   const navigate = useNavigate();

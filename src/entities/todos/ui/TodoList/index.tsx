@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 
 import { TodoItem } from '@/entities/todos/model';
+import Tag from '@/features/todos/ui/Tag';
 
 const TodoList = ({ data }: { data: TodoItem }) => {
   return (
     <div className="flex items-center justify-between gap-3">
+      <Tag priority={data.priority} />
       <p className="flex-grow">
         <Link to={`/${data.id}`} className="inline-block w-full py-3">
           {data.title}

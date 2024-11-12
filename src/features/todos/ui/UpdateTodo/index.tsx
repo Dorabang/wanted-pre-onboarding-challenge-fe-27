@@ -1,9 +1,11 @@
 // TodoUpdate.tsx
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { useTodo } from '@/features/todos/hooks/useTodo';
-import Form from '@/shared/Form';
+import Form from '@/shared/ui/Form';
 import { updateTodo } from '@/features/todos/api';
 import { TodoInput } from '@/entities/todos/model';
+import Button from '@/shared/ui/Button';
+import PriorityFilterModal from '@/features/filters/ui/PriorityFilterModal';
 
 const UpdateTodo = ({
   id,
@@ -18,7 +20,9 @@ const UpdateTodo = ({
   const [updatedTodo, setUpdatedTodo] = useState<TodoInput>({
     title: todo?.title ?? '',
     content: todo?.content ?? '',
+    priority: todo?.priority ?? 'normal',
   });
+  const [isPriorityModalOpen, setIsPriorityModalOpen] = useState(false);
 
   const handleChangeValue = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -45,6 +49,18 @@ const UpdateTodo = ({
 
   return (
     <Form onSubmit={handleUpdateTodo}>
+      <div className="mb-4">
+        <label className="mb-2 block text-sm font-medium">우선순위</label>
+        <Button
+          type="button"
+          variant="outlined"
+          onClick={() => setIsPriorityModalOpen(true)}
+        >
+          {updatedTodo.priority === 'urgent' && '높음'}
+          {updatedTodo.priority === 'normal' && '중간'}
+          {updatedTodo.priority === 'low' && '낮음'}
+        </Button>
+      </div>
       <Form.Input
         required
         label="제목"
@@ -63,6 +79,14 @@ const UpdateTodo = ({
         <Form.SubmitButton>수정</Form.SubmitButton>
         <Form.ResetButton onClick={onCancel}>취소</Form.ResetButton>
       </div>
+      <PriorityFilterModal
+        isOpen={isPriorityModalOpen}
+        onClose={() => setIsPriorityModalOpen(false)}
+        selectedPriority={updatedTodo.priority}
+        onSelectPriority={(priority) =>
+          setUpdatedTodo((prev) => ({ ...prev, priority }))
+        }
+      />
     </Form>
   );
 };

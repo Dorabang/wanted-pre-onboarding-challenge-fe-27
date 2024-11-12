@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 import { login } from '@/features/auth/api';
-import Form from '@/shared/Form';
+import Form from '@/shared/ui/Form';
 import useAuthForm from '@/features/auth/hooks/useAuthForm';
 import { authValidateCheck } from '@/features/auth/utils/authValidateCheck';
 
