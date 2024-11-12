@@ -6,6 +6,7 @@ import { createTodo } from '@/features/todos/api';
 import { TodoPriority } from '../../types/TodoQueryParams';
 import Button from '@/shared/ui/Button';
 import PriorityFilterModal from '@/features/filters/ui/PriorityFilterModal';
+import { getPriorityLabel } from '@/features/filters/utils';
 
 const AddTodo = ({
   refetch,
@@ -42,9 +43,7 @@ const AddTodo = ({
             variant="outlined"
             onClick={() => setIsPriorityModalOpen(true)}
           >
-            {priority === 'urgent' && '높음'}
-            {priority === 'normal' && '중간'}
-            {priority === 'low' && '낮음'}
+            {getPriorityLabel(priority)}
           </Button>
         </div>
         <Form.Input

@@ -6,6 +6,7 @@ import { updateTodo } from '@/features/todos/api';
 import { TodoInput } from '@/entities/todos/model';
 import Button from '@/shared/ui/Button';
 import PriorityFilterModal from '@/features/filters/ui/PriorityFilterModal';
+import { getPriorityLabel } from '@/features/filters/utils';
 
 const UpdateTodo = ({
   id,
@@ -56,9 +57,7 @@ const UpdateTodo = ({
           variant="outlined"
           onClick={() => setIsPriorityModalOpen(true)}
         >
-          {updatedTodo.priority === 'urgent' && '높음'}
-          {updatedTodo.priority === 'normal' && '중간'}
-          {updatedTodo.priority === 'low' && '낮음'}
+          {getPriorityLabel(updatedTodo.priority)}
         </Button>
       </div>
       <Form.Input

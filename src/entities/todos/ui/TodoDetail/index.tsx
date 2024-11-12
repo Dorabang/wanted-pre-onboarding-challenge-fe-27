@@ -1,4 +1,5 @@
 import { TodoItem } from '@/entities/todos/model';
+import { getPriorityLabel } from '@/features/filters/utils';
 import Button from '@/shared/ui/Button';
 import Form from '@/shared/ui/Form';
 
@@ -18,9 +19,7 @@ const TodoDetail = ({
         <div className="mb-4">
           <label className="mb-2 block text-sm font-medium">우선순위</label>
           <Button type="button" disabled variant="outlined">
-            {todo.priority === 'urgent' && '높음'}
-            {todo.priority === 'normal' && '중간'}
-            {todo.priority === 'low' && '낮음'}
+            {getPriorityLabel(todo.priority)}
           </Button>
         </div>
         <Form.Input value={todo.title} label="제목" view />
